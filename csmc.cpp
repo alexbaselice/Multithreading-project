@@ -236,6 +236,7 @@ int main(int argc, char *argv[])
 
 																	  // Waiting for the cordinator thread to finish (means all tutor threads have finished)
 	pthread_join(coordinator, NULL);
-	cout << "Cordinator Finished \n";
+	cout << "\nAll students finished work. Stopping Coordinator thread";
+	pthread_cancel(coordinator);
 
 }
